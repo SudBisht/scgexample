@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: yml-test-service
+          uri: http://localhost:8181
+          predicates:
+            - Path=/my/web/ser/**
+          Filters:
+            - RewritePath=/my/web/ser/(?<segment>.*), /$\{segment}

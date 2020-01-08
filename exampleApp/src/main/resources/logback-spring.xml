@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOG_DIR" value="/data/logs"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %highlight(%-5level) %green([%thread])
+                [%logger{46}.%M] - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+    <!--    TRACE, DEBUG, INFO, WARN, ERROR;-->
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
